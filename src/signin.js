@@ -5,7 +5,7 @@ function Signin()
         e.preventDefault();
         let name=document.getElementById("name").value;
         let pass=document.getElementById("password").value;
-        axios.get("http://localhost:2005/loguser/"+name).then((response)=>{
+        axios.get("https://pasmanfront.onrender.com/loguser/"+name).then((response)=>{
             if (response.data.msg=="found")
             {
                 if (response.data.pw==pass)
