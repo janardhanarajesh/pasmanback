@@ -12,7 +12,7 @@ function Signup()
             usermail:mail,
             password:pass
         }
-        axios.get("http://localhost:2005/checkuser/"+name).then((response)=>{
+        axios.get("https://pasmanfront.onrender.com/checkuser/"+name).then((response)=>{
             if (response.data.msg=="found")
             {
                 alert("This Username Is Not Avalible")
@@ -20,7 +20,7 @@ function Signup()
 
             }
             else{
-                axios.post("http://localhost:2005/signup",{user}).then((response1)=>{
+                axios.post("https://pasmanfront.onrender.com/signup",{user}).then((response1)=>{
                     alert(response1.data.msg)
                     window.location.href="/signin"
                 })
