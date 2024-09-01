@@ -28,13 +28,13 @@ function Pswd()
        
           
 
-        axios.get("http://localhost:2005/getpas/"+app+"/"+user).then((response)=>{
+        axios.get("https://pasmanfront.onrender.com/getpas/"+app+"/"+user).then((response)=>{
             if (response.data.msg==="found")
             {
                 alert("password already found")
             }
             else{
-                axios.post("http://localhost:2005/postpassword",{paswrd}).then((res)=>{
+                axios.post("https://pasmanfront.onrender.com/postpassword",{paswrd}).then((res)=>{
                     alert(res.data.msg)
                 })
             }
