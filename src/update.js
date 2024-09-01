@@ -30,7 +30,7 @@ function Edit()
             application:app,
             discription:disc,
         }
-        axios.put("http://localhost:2005/edituser/"+id,{pass}).then((res)=>{
+        axios.put("https://pasmanfront.onrender.com/edituser/"+id,{pass}).then((res)=>{
             alert(res.data.msg)
             localStorage.removeItem("id")
                 localStorage.removeItem("app")
