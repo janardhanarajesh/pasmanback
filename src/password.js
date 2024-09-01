@@ -17,7 +17,7 @@ function Getpas()
     useEffect(()=>{
         
 
-            axios.get("http://localhost:2005/getpassword/"+user).then((response)=>{
+            axios.get("https://pasmanfront.onrender.com/getpassword/"+user).then((response)=>{
                 let up=response.data.passwords
                 if(!up)
                 {
@@ -41,13 +41,13 @@ function Getpas()
     const del=(e)=>{
 
     
-        axios.delete("http://localhost:2005/delone/"+e).then((response)=>{
+        axios.delete("https://pasmanfront.onrender.com/delone/"+e).then((response)=>{
             alert(response.data.msg)
         })
 
     }
     const edit=(e,a,b,c)=>{
-        axios.get("http://localhost:2005/getpassword/"+user).then((res)=>{
+        axios.get("https://pasmanfront.onrender.com/getpassword/"+user).then((res)=>{
             if (res.data.msg=="found")
             {
                 localStorage.setItem("id",e)
